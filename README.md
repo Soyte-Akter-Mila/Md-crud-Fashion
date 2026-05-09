@@ -118,8 +118,7 @@ MD-Crud-Fashion/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/MD-Crud-Fashion.git
-cd MD-Crud-Fashion/MD-Crud-Fashion
+git clone https://github.com/Soyte-Akter-Mila/Md-crud-Fashion
 ```
 
 ### 2. Set the Connection String
@@ -231,11 +230,7 @@ Available at `/Customers/Aggregation`, this page calculates order statistics acr
 
 ---
 
-## 📸 Screenshots
 
-> *(Add screenshots of your running application here)*
-
----
 
 ## 🤝 Contributing
 
