@@ -1,0 +1,33 @@
+﻿@model MD_Crud_Fashion.Models.Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger mb-3">Delete Product</h2>
+
+
+    <h4 class="mb-3">Are you sure you want to delete this?</h4>
+
+    <dl class="row">
+        <dt class="col-sm-3 fw-bold">
+            @Html.DisplayNameFor(model => model.ProductsName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ProductsName)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductsId" />
+
+        <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Delete
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                Back to List
+            </a>
+        </div>
+    </form>
+</div>

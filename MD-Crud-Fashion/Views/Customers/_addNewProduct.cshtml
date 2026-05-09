@@ -1,0 +1,12 @@
+﻿@model Product
+
+<div class="row mb-2 product-row">
+    <div class="col-10">
+        <select name="productId" asp-items="ViewBag.products" class="form-select form-select-sm">
+            <option value="">-------Select Product------</option>
+        </select>
+    </div>
+    <div class="col-2">
+        <a class="btn btn-danger btn-sm btnDelete">X</a>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MD_Crud_Fashion.Models.Customer>
+@{
+    ViewData["Title"] = "Aggregation";
+}
+
+<div class="row">
+  
+    <div class="col-4">
+        <h2 class="display-4">Customer Info</h2>
+        <table class="table table-bordered table-striped table-sm">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Urgent Delivery</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(xx => item.CustomersName)</td>
+                        <td>@Html.DisplayFor(xx => item.CustomerSize)</td>
+                        <td>@Html.DisplayFor(xx => item.UrgentDelivery)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+  
+    <div class="col-8">
+        <h2 class="display-4">Aggregation Test</h2>
+        <table class="table table-bordered table-striped table-sm">
+            <thead class="table-primary">
+                <tr>
+                    <th>No of Customers</th>
+                    <th>Maximum Size</th>
+                    <th>Minimum Size</th>
+                    <th>Total Size</th>
+                    <th>Average Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@ViewBag.count</td>
+                    <td>@ViewBag.max</td>
+                    <td>@ViewBag.min</td>
+                    <td>@ViewBag.sum</td>
+                    <td>@ViewBag.avg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+﻿@model MD_Crud_Fashion.Models.ViewModels.CustomerVM
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="row">
+    <div class="col">
+     
+        <div id="panel"></div>
+
+        
+        <form id="frmDelete"
+              asp-action="Delete"
+              asp-controller="Customers"
+              data-ajax-method="post"
+              data-ajax-mode="replace"
+              data-ajax-update="#panel"
+              data-ajax-success="success"
+              data-ajax="true">
+
+            <div class="d-flex justify-content-between">
+                <div class="col-6">
+                    <h1 class="display-5 alert alert-danger">Are you sure to delete?</h1>
+
+                
+                    <input type="hidden" asp-for="CustomersId" />
+                    <input type="hidden" asp-for="Picture" />
+
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="CustomersName"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomersName" class="form-control form-control-sm" readonly />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="PaymentDate"></label>
+                        <div class="col-7">
+                            <input asp-for="PaymentDate" asp-format="{0:yyyy-MM-dd}" class="form-control form-control-sm" type="date" readonly />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="CustomerSize"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomerSize" class="form-control form-control-sm" readonly />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3">Current Picture</label>
+                        <div class="col-7">
+                            <img src="@Model.Picture" width="40" class="rounded-2 shadow-sm" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="UrgentDelivery"></label>
+                        <div class="col-7">
+                            <input asp-for="UrgentDelivery" type="checkbox" disabled />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-10 offset-3">
+                            <input type="submit" value="Confirm Delete" class="btn btn-danger" />
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <h1 class="display-5">Product List</h1>
+               
+                    <div id="productContainer">
+                        @foreach (var item in Model.ProductList)
+                        {
+                          
+                            <script>
+                                $.ajax({
+                                    url: "/Customers/AddNewProduct/@item",
+                                    type: "GET",
+                                    success: function (res) {
+                                        var $res = $(res);
+                                        $res.find('select').attr('disabled', true);
+                                        $res.find('.btnDelete').hide(); // ডিলিট বাটন হাইড
+                                        $("#productContainer").append($res);
+                                    }
+                                });
+                            </script>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/ajax/dist/jquery.unobtrusive-ajax.js"></script>
+
+    <script>
+        function success() {
+            
+            window.location.href = "/Customers/Index";
+        }
+    </script>
+}

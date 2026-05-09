@@ -1,0 +1,106 @@
+﻿@model MD_Crud_Fashion.Models.ViewModels.CustomerVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col">
+        <div id="panel"></div>
+        <form id="frmCreate"
+              asp-action="Create"
+              asp-controller="Customers"
+              data-ajax-method="post"
+              data-ajax-mode="replace"
+              data-ajax-update="#panel"
+              data-ajax-success="success"
+              data-ajax="true"
+              enctype="multipart/form-data">
+
+            <div class="d-flex justify-content-between">
+             
+                <div class="col-6">
+                    <h1 class="display-5">Add New Customer</h1>
+
+                    
+                    <div class="row mb-2">
+                        <label asp-for="CustomersName" class="col-form-label col-form-label-sm col-3"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomersName" class="form-control form-control-sm" />
+                        </div>
+                        <span asp-validation-for="CustomersName" class="text-danger col-2"></span>
+                    </div>
+
+                  
+                    <div class="row mb-2">
+                        <label asp-for="PaymentDate" class="col-form-label col-form-label-sm col-3"></label>
+                        <div class="col-7">
+                            <input asp-for="PaymentDate" type="date" class="form-control form-control-sm" />
+                        </div>
+                        <span asp-validation-for="PaymentDate" class="text-danger col-2"></span>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <label asp-for="CustomerSize" class="col-form-label col-form-label-sm col-3"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomerSize" class="form-control form-control-sm" />
+                        </div>
+                        <span asp-validation-for="CustomerSize" class="text-danger col-2"></span>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <label asp-for="PictureFile" class="col-form-label col-form-label-sm col-3"></label>
+                        <div class="col-7">
+                            <input asp-for="PictureFile" type="file" class="form-control form-control-sm" />
+                        </div>
+                        <span asp-validation-for="PictureFile" class="text-danger col-2"></span>
+                    </div>
+
+               
+                    <div class="row mb-2">
+                        <label asp-for="UrgentDelivery" class="col-form-label col-form-label-sm col-3"></label>
+                        <div class="col-7">
+                            <input asp-for="UrgentDelivery" type="checkbox" />
+                        </div>
+                        <span asp-validation-for="UrgentDelivery" class="text-danger col-2"></span>
+                    </div>
+
+                  
+                    <div class="row mb-2">
+                        <div class="col-10 offset-3">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-6">
+                    <h1 class="display-5">Product List</h1>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-primary btn-sm mb-1" id="btnPlus">+</a>
+                    </div>
+                    <div id="productContainer">
+                        <script>
+                            LoadProduct()
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/ajax/dist/jquery.unobtrusive-ajax.js"></script>
+
+    <script>
+        function success() {
+            $("#frmCreate").trigger('reset');
+            $("#productContainer").empty();
+            LoadProduct();
+        }
+    </script>
+}

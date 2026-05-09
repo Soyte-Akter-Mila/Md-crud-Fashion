@@ -1,0 +1,132 @@
+﻿@model CustomerVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col">
+        <div id="panel"></div>
+        <form id="frmEdit"
+              asp-action="Edit"
+              asp-controller="Customers"
+              data-ajax="true"
+              data-ajax-method="post"
+              data-ajax-mode="replace"
+              data-ajax-update="#panel"
+              data-ajax-success="success"
+              enctype="multipart/form-data">
+
+            <div class="d-flex justify-content-between">
+                
+                <div class="col-6">
+                    <h1 class="display-5">Edit Customer</h1>
+
+                    <input type="hidden" asp-for="CustomersId" />
+                    <input type="hidden" asp-for="Picture" />
+
+                    
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="CustomersName"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomersName" class="form-control form-control-sm" />
+                        </div>
+                        <div class="col-2">
+                            <span asp-validation-for="CustomersName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+               
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="PaymentDate"></label>
+                        <div class="col-7">
+                            <input asp-for="PaymentDate" class="form-control form-control-sm" type="date" />
+                        </div>
+                        <div class="col-2">
+                            <span asp-validation-for="PaymentDate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="CustomerSize"></label>
+                        <div class="col-7">
+                            <input asp-for="CustomerSize" class="form-control form-control-sm" />
+                        </div>
+                        <div class="col-2">
+                            <span asp-validation-for="CustomerSize" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="PictureFile"></label>
+                        <div class="col-7">
+                            <input asp-for="PictureFile" class="form-control form-control-sm mb-1" type="file" />
+                            <img src="@Model.Picture" width="32" height="32" class="rounded-2" />
+                        </div>
+                        <div class="col-2">
+                            <span asp-validation-for="PictureFile" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <label class="col-form-label col-form-label-sm col-3" asp-for="UrgentDelivery"></label>
+                        <div class="col-7">
+                            <input asp-for="UrgentDelivery" type="checkbox" />
+                        </div>
+                        <div class="col-2">
+                            <span asp-validation-for="UrgentDelivery" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                   
+                    <div class="row mb-2">
+                        <div class="col-10 offset-3">
+                            <input type="submit" value="Update" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-6">
+                    <h1 class="display-5">Product List</h1>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-outline-primary btn-sm mb-1" id="btnPlus">+</a>
+                    </div>
+                    <div id="productContainer">
+                        @foreach (var item in Model.ProductList)
+                        {
+                            <script>
+                                                        LoadProduct(@item);
+                            </script>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/ajax/dist/jquery.unobtrusive-ajax.js"></script>
+
+    <script>
+   
+        function LoadProduct(productId = null) {
+            var productCntr = $("#productContainer");
+            $.ajax({
+                url: "/Customers/AddNewProduct" + (productId ? "?id=" + productId : ""),
+                type: "GET",
+                success: function (data) {
+                    productCntr.append(data);
+                },
+                error: function () {
+                    alert("Failed to load product data.");
+                }
+            });
+        }
+    </script>
+}

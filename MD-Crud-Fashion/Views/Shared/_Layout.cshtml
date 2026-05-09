@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MD_Crud_Fashion</title>
+    <script type="importmap"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MD_Crud_Fashion.styles.css" asp-append-version="true" />
+
+    <script>
+              function LoadProduct(productId = null) {
+                var productCntr = $("#productContainer");
+                $.ajax({
+                    url: "/Customers/AddNewProduct" + (productId ? "?id=" + productId : ""),
+                    type: "GET",
+                    success: function (data) {
+                        productCntr.append(data);
+                    },
+                    error: function () {
+                        alert("Failed to load product data.");
+                    }
+                });
+            }
+
+            $(document).on("click", "#btnPlus", function (e) {
+                e.preventDefault();
+                LoadProduct();
+            });
+
+                
+            $(document).on("click", ".btnDelete", function (e) {
+                e.preventDefault();
+                $(this).closest(".row").remove();
+            });
+    </script>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-info border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-dark" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/Images/639107219152716557.png" alt="639107219152716557" width="30" height="30" class="d-inline-block align-top me-2">
+                    Fashion
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+       
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Index">Customer</a>
+                        </li>
+                        @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                        {
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Role Management</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="AssignRole">Assign Role</a>
+                                </li>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="Create"></a>
+                            </li>
+                           
+                        }
+                         @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">CreateRole</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="AssignRole">AssignRole</a>
+                        </li> *@ 
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        @await Component.InvokeAsync("ActiveOrders")
+
+                        <partial name="_LoginPartial" />
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="flex-grow-1 container my-4">
+        @RenderBody()
+    </main>
+
+   
+    <footer class="footer bg-dark text-white py-3 mt-auto">
+        <div class="container text-center">
+            &copy; @DateTime.Now.Year - MD_Crud_Fashion
+        </div>
+    </footer>
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

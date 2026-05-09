@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MD_Crud_Fashion.Models.Customer>
+@{
+    ViewData["Title"] = "Customer List";
+}
+
+<div class="row">
+    <div class="col">
+        <h2 class="display-4">Customer List</h2>
+        <div class="d-flex justify-content-end">
+            <a asp-action="Create" asp-controller="Customers" class="btn btn-outline-primary btn-sm mb-2">Add New Customer</a>
+        </div>
+
+        @foreach (var cust in Model)
+        {
+            <div class="card mb-2">
+                <div class="card-header d-flex justify-content-between">
+                    <div>
+                        <img src="@(cust.Picture ?? "/Images/default.png")" width="32" class="rounded-2" />
+                        <label class="me-2"><b>Name :</b> @cust.CustomersName</label>
+                        <label class="me-2"><b>Payment :</b> @cust.PaymentDate?.ToString("yyyy-MM-dd")</label>
+                        <label class="me-2"><b>Size :</b> @cust.CustomerSize</label>
+                        <label class="me-2"><b>Urgent :</b> @(cust.UrgentDelivery ? "Yes" : "No")</label>
+                    </div>
+                    <div>
+                        <a asp-action="Edit" asp-controller="Customers" asp-route-id="@cust.CustomersId" class="btn btn-outline-success btn-sm mb-2">Edit</a>
+                        <a asp-action="Delete" asp-controller="Customers" asp-route-id="@cust.CustomersId" class="btn btn-outline-danger btn-sm mb-2">Delete</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped table-sm">
+                        <thead class="table-info">
+                            <tr>
+                                <th>Product Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (cust.OrderEntries != null)
+                            {
+                                foreach (var item in cust.OrderEntries)
+                                {
+                                    <tr>
+                                        <td>@item.Product?.ProductsName</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </div>
+</div>

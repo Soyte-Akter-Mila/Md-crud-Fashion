@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\viewcomponents\\activeordersviewcomponent .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\viewcomponents\\activeordersviewcomponent .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\views\\customers\\_addnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\views\\customers\\_addnewproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\views\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\views\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|e:\\project\\md-crud-fashion\\md-crud-fashion\\md-crud-fashion\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2CE876D-C4F3-B45E-B7EE-95639E039181}|MD-Crud-Fashion\\MD-Crud-Fashion.csproj|solutionrelative:md-crud-fashion\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Models\\Customer.cs",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Models\\Customer.cs",
+              "RelativeToolTip": "MD-Crud-Fashion\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T10:21:56.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Controllers\\RoleController.cs",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "MD-Crud-Fashion\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T10:06:00.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Views\\Customers\\Create.cshtml",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Views\\Customers\\Create.cshtml",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Views\\Customers\\Create.cshtml",
+              "RelativeToolTip": "MD-Crud-Fashion\\Views\\Customers\\Create.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T09:54:50.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Program.cs",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Program.cs",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Program.cs",
+              "RelativeToolTip": "MD-Crud-Fashion\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T09:54:38.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_addNewProduct.cshtml",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Views\\Customers\\_addNewProduct.cshtml",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Views\\Customers\\_addNewProduct.cshtml",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Views\\Customers\\_addNewProduct.cshtml",
+              "RelativeToolTip": "MD-Crud-Fashion\\Views\\Customers\\_addNewProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T09:54:21.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActiveOrdersViewComponent .cs",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\ViewComponents\\ActiveOrdersViewComponent .cs",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\ViewComponents\\ActiveOrdersViewComponent .cs",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\ViewComponents\\ActiveOrdersViewComponent .cs",
+              "RelativeToolTip": "MD-Crud-Fashion\\ViewComponents\\ActiveOrdersViewComponent .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T09:54:10.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "MD-Crud-Fashion\\Controllers\\CustomersController.cs",
+              "ToolTip": "E:\\Project\\MD-Crud-Fashion\\MD-Crud-Fashion\\MD-Crud-Fashion\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "MD-Crud-Fashion\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAB0AAACAMzMzMzMhwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T04:47:53.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
